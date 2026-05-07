@@ -1,0 +1,39 @@
+{
+  "version": 1,
+  "author": "zeynep akın",
+  "editor": "wokwi",
+  "parts": [
+    { "type": "wokwi-arduino-mega", "id": "mega", "top": -258.6, "left": -282, "attrs": {} },
+    { "type": "wokwi-hc-sr04", "id": "hcsr", "top": -459.3, "left": -215.3, "attrs": { "distance": "188" } },
+    { "type": "wokwi-mpu6050", "id": "mpu", "top": 61.42, "left": 194.32, "attrs": { "temperature": "24" } },
+    { "type": "wokwi-membrane-keypad", "id": "kpd", "top": -251.6, "left": 495.2, "attrs": { "columns": "4" } },
+    { "type": "wokwi-servo", "id": "srv", "top": -11.6, "left": -96, "attrs": {} },
+    { "type": "board-ssd1306", "id": "oled1", "top": -342.46, "left": 576.23, "attrs": { "i2cAddress": "0x3c" } }
+  ],
+  "connections": [
+    [ "mega:5V", "hcsr:VCC", "red", [ "v83.7", "h386.3", "v-364.8", "h-412.8" ] ],
+    [ "mega:5V", "mpu:VCC", "red", [ "v83.7", "h386.3", "v67.2" ] ],
+    [ "hcsr:GND", "mega:GND.1", "black", [ "v0" ] ],
+    [ "mega:GND.2", "mpu:GND", "black", [ "v74.1", "h357.35" ] ],
+    [ "mega:5V", "oled1:VCC", "red", [ "v83.7", "h386.3", "v-364.8", "h355.05" ] ],
+    [ "srv:GND", "mega:GND.2", "black", [ "h0" ] ],
+    [ "mega:5V", "srv:V+", "red", [ "v0" ] ],
+    [ "mega:30", "kpd:R1", "red", [ "v1", "h401", "v307.2", "h115.2" ] ],
+    [ "mega:31", "kpd:R2", "gold", [ "v1", "h391", "v316.8", "h125.2" ] ],
+    [ "mega:32", "kpd:R3", "magenta", [ "v1.1", "h391.4", "v316.8", "h144.3" ] ],
+    [ "mega:33", "kpd:R4", "limegreen", [ "v1.1", "h381.4", "v326.4", "h163.2" ] ],
+    [ "mega:34", "kpd:C1", "blue", [ "v1.2", "h381.8", "v326.4", "h172.8" ] ],
+    [ "mega:35", "kpd:C2", "orange", [ "v1.2", "h371.8", "v336", "h182.4" ] ],
+    [ "mega:36", "kpd:C3", "green", [ "v1.3", "h372.2", "v336", "h201.6" ] ],
+    [ "mega:37", "kpd:C4", "purple", [ "v1.3", "h362.2", "v345.6", "h211.5" ] ],
+    [ "hcsr:ECHO", "mega:10", "purple", [ "v0" ] ],
+    [ "hcsr:TRIG", "mega:11", "orange", [ "v105.6", "h-0.4" ] ],
+    [ "oled1:GND", "mega:GND.2", "black", [ "v-9.6", "h-355.2", "v345.6", "h-366.95" ] ],
+    [ "mega:20", "oled1:SDA", "gray", [ "v-124.8", "h597.13" ] ],
+    [ "mega:21", "oled1:SCL", "violet", [ "v-115.2", "h578.1" ] ],
+    [ "mega:20", "mpu:SDA", "gray", [ "v-19.2", "h194", "v336" ] ],
+    [ "mega:21", "mpu:SCL", "violet", [ "v-28.8", "h194.02" ] ],
+    [ "mega:12", "srv:PWM", "blue", [ "v-19.2", "v374.2" ] ]
+  ],
+  "dependencies": {}
+}
