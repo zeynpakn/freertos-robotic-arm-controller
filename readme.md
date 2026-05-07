@@ -205,13 +205,19 @@ In Wokwi, click the HC-SR04 component to change distance and the MPU6050 to chan
 
 ## 📸 Screenshots & Demo
 
-> *Run the simulation, then add your screenshots and GIF here.*
+<div align="center">
 
 | OLED Display | Serial Monitor | Wokwi Simulation |
-|:---:|:---:|:---:|   
-| ![OLED](assets/oled.png) | ![Serial](assets/serial.png) | ![Wokwi](assets/wokwi.png) |
+|:---:|:---:|:---:|
+| <img src="assets/oled.png" width="180"> | <img src="assets/serial.png" width="320"> | <img src="assets/wokwi.png" width="320"> |
 
-![Demo](assets/demo.gif)
+<br>
+
+### 🎬 Live Demo
+
+<img src="assets/demo.gif" width="700">
+
+</div>
 
 ---
 
